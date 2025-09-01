@@ -26,3 +26,7 @@
     ? console.log("Hmmm")
     : console.log("Huu");
 }
+
+/* ---------------------------------- NOTES --------------------------------- */
+10 === 10 ? true : false;
+`Hari ini libur? ${true ? "Yes libur" : "Yah masuk"}`;
