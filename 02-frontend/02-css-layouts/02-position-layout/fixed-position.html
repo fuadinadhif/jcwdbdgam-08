@@ -1,0 +1,52 @@
+<!--
+1. Patokan top, bottom, left, right-nya adalah posisi viewport
+2. Posisi asli akan dianggap kosong
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fixed Position</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+      }
+
+      #divOne {
+        background-color: deeppink;
+        position: relative;
+      }
+
+      #divTwo {
+        background-color: green;
+      }
+
+      #divThree {
+        background-color: blue;
+      }
+
+      body {
+        height: 1000vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="divOne">
+      <div
+        id="divOnePoinOne"
+        style="
+          width: 125px;
+          height: 125px;
+          background-color: black;
+          position: fixed;
+          right: 20px;
+          bottom: 20px;
+        "
+      ></div>
+    </div>
+    <div id="divTwo"></div>
+    <div id="divThree"></div>
+  </body>
+</html>

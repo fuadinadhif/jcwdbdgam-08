@@ -13,11 +13,50 @@
 
       #image-1 {
         width: 200px;
+        filter: brightness(25%);
+      }
+
+      #image-1:hover {
+        filter: brightness(100%);
       }
 
       p {
         text-align: center;
         text-decoration: underline;
+      }
+
+      a:link {
+        color: red;
+      }
+
+      a:visited {
+        color: green;
+      }
+
+      button:hover {
+        background-color: yellow;
+      }
+
+      p::first-line {
+        color: salmon;
+      }
+
+      h1::after {
+        content: "❤";
+      }
+
+      h1::before {
+        content: "💨";
+      }
+
+      ul {
+        list-style: none;
+        padding: 0px;
+      }
+
+      li::before {
+        content: "💥";
+        font-size: 32px;
       }
     </style>
     <link rel="stylesheet" href="./01-intro-to-css.css" />
@@ -81,6 +120,23 @@
         </tr>
       </tbody>
     </table>
+
+    <a href="https://twitter.com">Visit Twitter</a>
+    <a href="https://instagram.com">Visit Instagram</a>
+
+    <p>Lorem short</p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias numquam
+      amet, nisi voluptates voluptatem quia laboriosam temporibus animi eveniet
+      possimus, optio harum, eos neque tempore praesentium quis? Necessitatibus,
+      rem hic.
+    </p>
+
+    <ul>
+      <li>Badminton</li>
+      <li>Mini Soccer</li>
+      <li>Nyetir Mobil</li>
+    </ul>
   </body>
 </html>
 

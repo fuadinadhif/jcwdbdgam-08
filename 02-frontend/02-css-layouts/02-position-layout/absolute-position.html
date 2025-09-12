@@ -1,0 +1,47 @@
+<!--
+1. Patokan top, bottom, left, right-nya adalah posisi parent dengan posisi non-static
+2. Posisi asli akan dianggap kosong
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Absolute Position</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+      }
+
+      #divOne {
+        background-color: deeppink;
+        position: relative;
+      }
+
+      #divTwo {
+        background-color: green;
+      }
+
+      #divThree {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="divOne">
+      <div
+        id="divOnePoinOne"
+        style="
+          width: 25px;
+          height: 25px;
+          background-color: black;
+          position: absolute;
+          right: 20px;
+        "
+      ></div>
+    </div>
+    <div id="divTwo"></div>
+    <div id="divThree"></div>
+  </body>
+</html>
