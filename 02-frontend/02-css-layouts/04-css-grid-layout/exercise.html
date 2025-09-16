@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise</title>
+    <style>
+      #parent {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 282px);
+        gap: 30px;
+        /* justify-items: center;
+        align-items: center; */
+      }
+
+      #childOne {
+        background-color: #733fc8;
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+
+      #childTwo {
+        background-color: #48556a;
+        grid-column-start: 3;
+        grid-column-end: 4;
+      }
+
+      #childThree {
+        background-color: deeppink;
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+
+      #childFour {
+        background-color: #19202d;
+        grid-column-start: 1;
+        grid-column-end: 2;
+      }
+
+      #childFive {
+        background-color: tomato;
+        grid-column-start: 2;
+        grid-column-end: 4;
+      }
+
+      div {
+        color: white;
+        font-size: 42px;
+      }
+
+      @media (max-width: 480px) {
+        #parent {
+          grid-template-columns: 1fr;
+        }
+
+        #childOne,
+        #childTwo,
+        #childThree,
+        #childFour,
+        #childFive {
+          grid-column-start: unset;
+          grid-column-end: unset;
+          grid-row-start: unset;
+          grid-row-end: unset;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parent">
+      <div id="childOne">Child One</div>
+      <div id="childTwo">Child Two</div>
+      <div id="childThree">Child Three</div>
+      <div id="childFour">Child Four</div>
+      <div id="childFive">Child Five</div>
+    </div>
+  </body>
+</html>
