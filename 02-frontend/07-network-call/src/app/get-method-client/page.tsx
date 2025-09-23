@@ -5,6 +5,7 @@ import axios from "axios";
 
 export default function GetMethodClient() {
   const [articles, setArticles] = useState([]);
+  const [refresh, setRefresh] = useState(0);
 
   useEffect(() => {
     async function getArticles() {
@@ -17,7 +18,7 @@ export default function GetMethodClient() {
     }
 
     getArticles();
-  }, []);
+  }, [refresh]);
 
   return (
     <main>
@@ -27,6 +28,7 @@ export default function GetMethodClient() {
           <h2 key={article.objectId}>{article.title}</h2>
         ))}
       </div>
+      <button onClick={() => setRefresh(refresh + 1)}>Refresh</button>
     </main>
   );
 }
