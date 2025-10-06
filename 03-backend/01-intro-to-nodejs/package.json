@@ -1,0 +1,15 @@
+{
+  "name": "01-intro-to-nodejs",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "npm run build && node dist/index.js"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^24.6.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}
