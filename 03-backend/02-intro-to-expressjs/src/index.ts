@@ -1,5 +1,5 @@
 import express from "express";
-import { readTodos, writeTodos } from "./utils/io.js";
+import todosRoutes from "./routes/todos.route.js";
 
 const PORT: number = 8080;
 
@@ -12,27 +12,22 @@ server.get("/health", (request, response) => {
   response.status(200).json("API is running and okay!");
 });
 
-/* --------------------------- Articles Endpoints --------------------------- */
-server.get("/articles", (request, response) => {
-  response.status(200).json({ data: [] });
-});
-server.post("/articles", () => {});
-
 /* ----------------------------- Todos Endpoints ---------------------------- */
-server.get("/todos", async (request, response) => {
-  const todos = await readTodos();
-  response.status(200).json(todos);
-});
-server.post("/todos", async (request, response) => {
-  const newTodo = request.body;
-  const oldTodos = await readTodos();
-  const updatedTodos = [...oldTodos, newTodo];
-
-  await writeTodos(updatedTodos);
-
-  response.status(201).json({ message: "Todo added!" });
-});
+server.use("/todos", todosRoutes);
 
 server.listen(PORT, () => {
   console.info(`Application run on port: ${PORT}`);
 });
+
+/* -------------------------------------------------------------------------- */
+/*                                    NOTES                                   */
+/* -------------------------------------------------------------------------- */
+/*
+https://yourdomain.com/parameter1/parameter2?query1=value&query2=value
+http://localhost:8000/parameter1/parameter2?query1=value&query2=value
+
+[PROTOCOL]://[DOMAIN]/[PARAMS1]/[PARAMS2]?[QUERY_NAME1]=[VALUE_QUERY1]
+
+PARAMS = request.params.[PARAMS_NAME]
+QUERY = request.query.[QUERY_NAME]
+*/

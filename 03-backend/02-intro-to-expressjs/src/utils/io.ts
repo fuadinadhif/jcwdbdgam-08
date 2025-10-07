@@ -14,5 +14,5 @@ export async function readTodos() {
 }
 
 export async function writeTodos(todos: ITodo[]) {
-  await fs.writeFile("data.json", JSON.stringify(todos));
+  await fs.writeFile("data.json", JSON.stringify(todos, null, 2));
 }
