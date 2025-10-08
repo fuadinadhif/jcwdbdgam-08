@@ -1,0 +1,26 @@
+[
+  {
+    "id": "c59d5b35-76d8-4a67-b905-54671a49e4cb",
+    "title": "Monthly Salary",
+    "nominal": 5000000,
+    "type": "income",
+    "category": "salary",
+    "date": "2025-10-01"
+  },
+  {
+    "id": "3d8709f4-8e2d-4f73-900e-0e1b2f5ccf4a",
+    "title": "Lunch at Restaurant",
+    "nominal": 75000,
+    "type": "expense",
+    "category": "food",
+    "date": "2025-10-03"
+  },
+  {
+    "id": "dff5f97f-547b-40e0-b915-57d1bca86f1f",
+    "title": "Commuter Train Ticket",
+    "nominal": 30000,
+    "type": "expense",
+    "category": "transport",
+    "date": "2025-10-04"
+  }
+]
